@@ -1,0 +1,29 @@
+POST http://localhost:5001/task
+Content-Type: application/json
+
+{
+  "title": "Tugas Matematika",
+  "description": "Tugas 2 ini adalah tugas pertama saya",
+  "dueDate": "2024-11-05",
+  "priority": "High",
+  "status": "Todo",
+  "tags": ["Tugas2", "Sekolah"]
+}
+
+###
+GET http://localhost:5001/task
+###
+GET http://localhost:5001/task/672a4729cc41dc5f7e53f6a1
+
+###
+PUT http://localhost:5001/task/672a4164b550104b35469ccf
+Content-Type: application/json
+
+{
+  "title": "Mobile Legend",
+  "description": "Tugas 2 ini adalah tugas mobile legend",
+  "dueDate": "2024-05-05",
+  "priority": "High",
+  "status": "Todo",
+  "tags": ["Teman"]
+}
