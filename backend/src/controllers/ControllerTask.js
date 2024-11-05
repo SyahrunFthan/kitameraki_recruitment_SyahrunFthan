@@ -127,13 +127,14 @@ const deleteTask = async (req, res) => {
   try {
     // Get data id task
     const task = await Task.findById(id);
+    if (!task)
+      return res.status(404).json({ message: "Data tidak di temukan!" });
+    console.log(task);
 
     // Delete data berdasarkan id
     await Task.findByIdAndDelete(id);
 
-    return res
-      .status(204)
-      .json({ message: `Tugas ${task.title} berhasil di hapus!` });
+    return res.status(204).send();
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }

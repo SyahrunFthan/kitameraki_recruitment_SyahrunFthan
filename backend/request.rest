@@ -27,3 +27,6 @@ Content-Type: application/json
   "status": "Todo",
   "tags": ["Teman"]
 }
+
+###
+DELETE http://localhost:5001/task/672a5b12e9c5df8332f79875

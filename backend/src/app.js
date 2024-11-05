@@ -8,6 +8,8 @@ dotenv.config(); // load env variable
 
 db();
 
+const PORT = process.env.PORT_APP || 5001; // Get port in  .env file or default to 5001
+
 const app = express(); // Connect to express
 
 // Middleware
@@ -18,5 +20,6 @@ app.use(cors({ credentials: true }));
 // Route Path API
 app.use("/task", RouteTask);
 
-const PORT = process.env.PORT_APP || 5001;
 app.listen(PORT, () => console.log(`Server run at port ${PORT}`));
+
+module.exports = app;
