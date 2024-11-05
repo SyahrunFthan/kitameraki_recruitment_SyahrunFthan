@@ -129,7 +129,6 @@ const deleteTask = async (req, res) => {
     const task = await Task.findById(id);
     if (!task)
       return res.status(404).json({ message: "Data tidak di temukan!" });
-    console.log(task);
 
     // Delete data berdasarkan id
     await Task.findByIdAndDelete(id);
