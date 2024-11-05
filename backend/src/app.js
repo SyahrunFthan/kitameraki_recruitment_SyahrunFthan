@@ -4,6 +4,7 @@ const cors = require("cors");
 const db = require("./configs/Database");
 const dotenv = require("dotenv");
 const RouteTask = require("./routers/RouteTask");
+const RouteUser = require("./routers/RouteUser");
 dotenv.config(); // load env variable
 
 db();
@@ -19,6 +20,7 @@ app.use(cors({ credentials: true }));
 
 // Route Path API
 app.use("/task", RouteTask);
+app.use("/auth", RouteUser);
 
 app.listen(PORT, () => console.log(`Server run at port ${PORT}`));
 

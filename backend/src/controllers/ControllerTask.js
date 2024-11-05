@@ -36,7 +36,14 @@ const createTask = async (req, res) => {
         .json({ message: `Tugas ${checkTask.title} sudah ada!` });
 
     // Save to database
-    await Task(req.body).save();
+    await Task.create({
+      title: title,
+      description: description,
+      dueDate: dueDate,
+      priority: priority,
+      status: status,
+      tags: tags,
+    });
 
     return res.status(201).json({ message: "Data berhasil di simpan!" });
   } catch (error) {
@@ -114,7 +121,14 @@ const updateTask = async (req, res) => {
 
   try {
     // Save change
-    await Task.findByIdAndUpdate(id, req.body, { new: true });
+    await Task.findByIdAndUpdate(id, {
+      title: title,
+      description: description,
+      dueDate: dueDate,
+      priority: priority,
+      status: status,
+      tags: tags,
+    });
 
     return res.status(200).json({ message: "Data berhasil di ubah!" });
   } catch (error) {

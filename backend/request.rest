@@ -1,5 +1,6 @@
 POST http://localhost:5001/task
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4MjEzOGUzYS00MjQ5LTQwNGItYWQzZi05ZTk0ZTFhMDQ0ZjkiLCJlbWFpbCI6InN5YWhydWxtZWkwMDJAZ21haWwuY29tIiwibmFtZSI6IlN5YWhydW5GYXRoYW4iLCJpYXQiOjE3MzA4MzgxNDQsImV4cCI6MTczMDkyNDU0NH0.pNd9DyVfpps3eazYM53jggqYLSW-rNmOWyQ1DLEiLFA
 
 {
   "title": "Tugas Matematika",
@@ -12,6 +13,7 @@ Content-Type: application/json
 
 ###
 GET http://localhost:5001/task
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkNjZlYmIyZi1hMzZhLTQ3NzktYTMxYS01NjkyMGJhODA1MTQiLCJlbWFpbCI6InN5YWhydWxtZWkwMDJAZ21haWwuY29tIiwibmFtZSI6IlN5YWhydW5GYXRoYW4iLCJpYXQiOjE3MzA4Mzg2OTgsImV4cCI6MTczMDkyNTA5OH0.ugm3ijnLftMoathwNzpSGqBd1ETzGwCvShOmottoZVY
 ###
 GET http://localhost:5001/task/672a4729cc41dc5f7e53f6a1
 
@@ -30,3 +32,25 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5001/task/672a5b12e9c5df8332f79875
+
+###
+POST http://localhost:5001/auth/register
+Content-Type: application/json
+
+{
+  "email": "arunilaba12@gmail.com",
+  "username": "ArunILaba",
+  "password": "@Syahrun19"
+}
+
+###
+POST http://localhost:5001/auth/login
+Content-Type: application/json
+
+{
+  "username": "SyahrunFathan",
+  "password": "@Syahrun19"
+}
+
+###
+DELETE http://localhost:5001/auth/672a80374e12ebe8edee11e4
