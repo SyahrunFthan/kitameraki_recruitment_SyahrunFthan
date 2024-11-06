@@ -2,7 +2,7 @@ POST http://localhost:5001/task
 Content-Type: application/json
 
 {
-  "title": "Tugas Matematika",
+  "title": "Tugas 10",
   "description": "Tugas 2 ini adalah tugas pertama saya",
   "dueDate": "2024-11-05",
   "priority": "High",

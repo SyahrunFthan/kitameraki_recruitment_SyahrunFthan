@@ -8,11 +8,7 @@ const createTask = async (req, res) => {
     return res
       .status(400)
       .json({ message: "Title must be filled!", error: "title" });
-  if (description == "")
-    return res
-      .status(400)
-      .json({ message: "Desctiption must be filled!", error: "description" });
-  if (dueDate == "")
+  if (dueDate == "" || dueDate == null)
     return res
       .status(400)
       .json({ message: "Due date must be filled!", error: "dueDate" });
@@ -22,7 +18,11 @@ const createTask = async (req, res) => {
       .json({ message: "Select priority!", error: "priority" });
   if (status == "")
     return res.status(400).json({ message: "Select status!", error: "status" });
-  if (tags == "")
+  if (description == "")
+    return res
+      .status(400)
+      .json({ message: "Desctiption must be filled!", error: "description" });
+  if (tags.length == 0)
     return res
       .status(400)
       .json({ message: "Tags must be filled!", error: "tags" });
@@ -55,6 +55,7 @@ const getDataTask = async (req, res) => {
     })
       .limit(limit)
       .skip(skip)
+      .sort({ dueDate: 1 })
       .exec();
 
     // Hitung data berdasarkan pencarian
@@ -97,7 +98,7 @@ const updateTask = async (req, res) => {
     return res
       .status(400)
       .json({ message: "Desctiption must be filled!", error: "description" });
-  if (dueDate == "")
+  if (dueDate == "" || dueDate == null)
     return res
       .status(400)
       .json({ message: "Due date must be filled!", error: "dueDate" });

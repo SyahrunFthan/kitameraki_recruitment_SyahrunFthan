@@ -50,8 +50,8 @@ const SchemaTask = new Schema(
     },
   },
   {
-    timestamps: true, // Menyimpan createdAt dan updatedAt otomatis
-    versionKey: false, // Menghilangkan __v field
+    timestamps: true,
+    versionKey: false,
   }
 );
 
