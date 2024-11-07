@@ -12,6 +12,7 @@ Project tes pemrograman
     - [Frontend](#frontend)
   - [Penggunaan](#penggunaan)
     - [Backend](#backend-1)
+  - [Dokumentasi](#dokumentasi)
 
 ## Persyaratan
 
@@ -83,3 +84,9 @@ Anda dapat mengakses aplikasi di [http://localhost:3000](http://localhost:3000)
 1. Setelah server berjalan, anda dapat mengakses api di [http://localhost:5001/](http://localhost:5001)
 2. Gunakan alat seperti [Postman](https://www.postman.com/) untuk mengirim request ke API.
 3. Import file openapi.json untuk menguji API.
+
+## Dokumentasi
+
+![Screenshot](docs/home.png)
+![Screenshot](docs/create.png)
+![Screenshot](docs/edit.png)
