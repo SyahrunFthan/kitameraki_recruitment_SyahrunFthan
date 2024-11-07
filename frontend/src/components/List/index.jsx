@@ -14,7 +14,7 @@ import { Stack } from "@fluentui/react";
 import React from "react";
 import moment from "moment";
 
-const List = ({ tasks, currentPage, limit, onEdit, onDelete }) => {
+const List = ({ tasks, page, limit, onEdit, onDelete }) => {
   // Set Column Table
   const columns = [
     { key: "number", label: "No" },
@@ -26,6 +26,7 @@ const List = ({ tasks, currentPage, limit, onEdit, onDelete }) => {
     { key: "tags", label: "Tag" },
     { key: "action", label: "#" },
   ];
+
   return (
     <Table>
       <TableHeader>
@@ -43,7 +44,7 @@ const List = ({ tasks, currentPage, limit, onEdit, onDelete }) => {
             <TableRow key={index}>
               <TableCell>
                 <TableCellLayout>
-                  {(currentPage - 1) * limit + index + 1}
+                  {(page - 1) * limit + index + 1}
                 </TableCellLayout>
               </TableCell>
               <TableCell>

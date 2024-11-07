@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../Layout";
-import { Button, Input, Spinner } from "@fluentui/react-components";
-import { Add20Regular, SearchRegular } from "@fluentui/react-icons";
-import { Header, List, Loading, Pagination } from "../../components";
+import { HomeComponents, Loading } from "../../components";
 import { deleteDataTask, getDataTask } from "../../utils";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -86,36 +84,18 @@ const Home = () => {
   };
   return (
     <Layout>
-      <div className="flex justify-start items-center h-full w-full bg-white flex-col p-10">
-        <div className="flex flex-col min-w-[510px] max-w-[1200px] gap-4 w-full">
-          <div className="flex items-center justify-between w-full justify mb-4">
-            <Header text={"Syahrun Fathan Hidayah | List Tugas"} />
-            <div className="flex flex-row items-center gap-3">
-              <Input
-                contentBefore={<SearchRegular />}
-                placeholder="Search"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-              />
-              <Button
-                onClick={() => navigate("/create")}
-                appearance="primary"
-                icon={<Add20Regular />}
-              >
-                Tambah Data
-              </Button>
-            </div>
-          </div>
-          <List
-            currentPage={page}
-            limit={limit}
-            tasks={tasks}
-            onEdit={(id) => handleEdit(id)}
-            onDelete={(id) => handleDelete(id)}
-          />
-          <Pagination totalPages={totalPage} onPageChange={setPage} />
-        </div>
-      </div>
+      <HomeComponents
+        search={search}
+        setSearch={setSearch}
+        setPage={setPage}
+        limit={limit}
+        tasks={tasks}
+        onEdit={(id) => handleEdit(id)}
+        onDelete={(id) => handleDelete(id)}
+        totalPage={totalPage}
+        onClick={() => navigate("/create")}
+        page={page}
+      />
       {loading && <Loading />}
     </Layout>
   );
