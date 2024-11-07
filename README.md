@@ -48,7 +48,7 @@ npm install
    ```bash
    MONGODB_URL= // isi dengan uri database  MongoDB Anda
    PORT_APP=5001
-   ACCESS_TOKEN= //  isi dengan token akses yang Anda inginkan
+   ACCESS_TOKEN=mp4QFM9FijSRP8zGFebHHvFazIEhiQtj8Bvz009lWO0OqoCdfiw7wT1Y6SO47xjo
 
    ```
 
@@ -63,6 +63,6 @@ Anda dapat mengakses API di [http://localhost:5001/](http://localhost:5001/)
 
 ### Backend
 
-1. Setelah server berjalan, anda dapat mengakses api di [http://localhost:5000/]
+1. Setelah server berjalan, anda dapat mengakses api di [http://localhost:5001/](http://localhost:5001/)
 2. Gunakan alat seperti [Postman](https://www.postman.com/) untuk mengirim request ke API.
 3. Import file openapi.auth.json untuk menguji API.
