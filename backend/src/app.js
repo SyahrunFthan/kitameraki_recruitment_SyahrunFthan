@@ -13,9 +13,9 @@ const PORT = process.env.PORT_APP || 5001; // Get port in  .env file or default 
 const app = express(); // Connect to express
 
 // Middleware
-app.use(express.json());
-app.use(cookieParser());
-app.use(cors({ credentials: true }));
+app.use(express.json()); // Set server  to accept json data
+app.use(cookieParser()); // Set server  to parse cookies
+app.use(cors({ credentials: true, origin: "http://localhost:3000" })); // Set server  to allow CORS from frontend
 
 // Route Path API
 app.use("/task", RouteTask);
