@@ -82,4 +82,4 @@ Anda dapat mengakses aplikasi di [http://localhost:3000](http://localhost:3000)
 
 1. Setelah server berjalan, anda dapat mengakses api di [http://localhost:5000/api]
 2. Gunakan alat seperti [Postman](https://www.postman.com/) untuk mengirim request ke API.
-3. Import file openapi.json untuk menguji API dan import .
+3. Import file openapi.json untuk menguji API.
