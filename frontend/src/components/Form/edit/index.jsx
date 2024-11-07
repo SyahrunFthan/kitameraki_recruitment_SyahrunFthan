@@ -43,12 +43,13 @@ const EditComponents = ({
                 setFormData({
                   ...formData,
                   dueDate: moment(e, "YYYY-MM-DD").format("YYYY-MM-DD"),
+                  date: e,
                 });
               }}
               required
               placeholder="Select a date..."
               className="w-full"
-              value={formData.dueDate}
+              value={formData.date}
             />
             {formError.dueDate && (
               <span className="text-red-500">{formError.dueDate}</span>

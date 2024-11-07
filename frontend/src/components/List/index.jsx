@@ -97,9 +97,14 @@ const List = ({ tasks, currentPage, limit, onEdit, onDelete }) => {
             </TableRow>
           ))
         ) : (
-          <TableCell>
-            <TableCellLayout></TableCellLayout>
-          </TableCell>
+          <TableRow>
+            <TableCell
+              colSpan={8}
+              className="text-center text-black text-xl font-semibold italic"
+            >
+              Tidak Ada Data
+            </TableCell>
+          </TableRow>
         )}
       </TableBody>
     </Table>

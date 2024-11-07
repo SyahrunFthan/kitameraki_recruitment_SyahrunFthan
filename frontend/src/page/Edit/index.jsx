@@ -15,6 +15,7 @@ const Edit = () => {
     title: "",
     description: "",
     dueDate: null,
+    date: null,
     priority: "",
     status: "",
     tags: [],
@@ -59,6 +60,7 @@ const Edit = () => {
     }
   };
 
+  // Save to database
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -100,6 +102,7 @@ const Edit = () => {
       setFormData({
         title: response.data.response.title,
         description: response.data.response.description,
+        date: new Date(response.data.response.dueDate),
         dueDate: new Date(response.data.response.dueDate),
         tags: response.data.response.tags,
         priority: response.data.response.priority,
