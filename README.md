@@ -46,7 +46,7 @@ npm install
 
 3. Konfigurasi file .env:
    ```bash
-   MONGODB_URL=mongodb://localhost:27017/db_task
+   MONGODB_URL= // Isi dengan  URL MongoDB Anda
    PORT_APP=5001
    ACCESS_TOKEN=mp4QFM9FijSRP8zGFebHHvFazIEhiQtj8Bvz009lWO0OqoCdfiw7wT1Y6SO47xjo
    ```
@@ -80,6 +80,6 @@ Anda dapat mengakses aplikasi di [http://localhost:3000](http://localhost:3000)
 
 ### Backend
 
-1. Setelah server berjalan, anda dapat mengakses api di [http://localhost:5000/api]
+1. Setelah server berjalan, anda dapat mengakses api di [http://localhost:5001/](http://localhost:5001)
 2. Gunakan alat seperti [Postman](https://www.postman.com/) untuk mengirim request ke API.
 3. Import file openapi.json untuk menguji API.
