@@ -114,7 +114,7 @@ const updateTask = async (req, res) => {
       .json({ message: "Select priority!", error: "priority" });
   if (status == "")
     return res.status(400).json({ message: "Select status!", error: "status" });
-  if (tags == "")
+  if (tags.length == 0)
     return res
       .status(400)
       .json({ message: "Tags must be filled!", error: "tags" });
